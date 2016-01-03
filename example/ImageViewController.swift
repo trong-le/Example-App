@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageViewController: UIViewController
+class ImageViewController: UIViewController, UIScrollViewDelegate
 {
 
     var imageURL: NSURL? {
@@ -21,16 +21,6 @@ class ImageViewController: UIViewController
     }
     
     let imageView = UIImageView()
-    
-    // Size image
-    private var image: UIImage? {
-        get { return imageView.image }
-        set {
-            imageView.image = newValue
-            imageView.sizeToFit()
-        }
-    }
-    
     
     // Get image from image URL. Not using main thread to make faster
     private func getImage() {
@@ -51,10 +41,32 @@ class ImageViewController: UIViewController
         }
     }
     
+    // Size image
+    private var image: UIImage? {
+        get { return imageView.image }
+        set {
+            imageView.image = newValue
+            imageView.sizeToFit()
+            scrollView?.contentSize = imageView.frame.size
+        }
+    }
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+    @IBOutlet weak var scrollView: UIScrollView! {
+        didSet{
+            scrollView.contentSize = imageView.frame.size
+            scrollView.delegate = self
+            scrollView.minimumZoomScale = 0.5
+            scrollView.maximumZoomScale = 1.5
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(imageView)
+        scrollView.addSubview(imageView)
     }
     
     // Set up image
