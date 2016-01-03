@@ -217,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="2231" y="-658"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="fcq-XN-DEP">
             <objects>
-                <viewController id="sfc-uz-Mdf" sceneMemberID="viewController">
+                <viewController id="sfc-uz-Mdf" customClass="MapViewController" customModule="example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lGt-lt-wto"/>
                         <viewControllerLayoutGuide type="bottom" id="cFY-D7-dtz"/>
@@ -244,6 +244,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c22-1M-7H0"/>
+                    <connections>
+                        <outlet property="mapView" destination="re1-E6-rzf" id="J7A-fR-BUP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRc-Kc-XId" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

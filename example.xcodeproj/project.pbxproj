@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F85D54B51C388F6B009310E9 /* JSONDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85D54B41C388F6B009310E9 /* JSONDataTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F85D54F31C398F39009310E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85D54F21C398F39009310E9 /* MapKit.framework */; };
+		F85D54F51C3992A4009310E9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85D54F41C3992A4009310E9 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F896464E1C32FEA400BFFAA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F896464D1C32FEA400BFFAA8 /* AppDelegate.swift */; };
 		F89646501C32FEA400BFFAA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F896464F1C32FEA400BFFAA8 /* ViewController.swift */; };
 		F89646531C32FEA400BFFAA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89646511C32FEA400BFFAA8 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		F85D54B41C388F6B009310E9 /* JSONDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDataTableViewController.swift; sourceTree = "<group>"; };
 		F85D54F21C398F39009310E9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F85D54F41C3992A4009310E9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F896464A1C32FEA400BFFAA8 /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F896464D1C32FEA400BFFAA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F896464F1C32FEA400BFFAA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				F896467C1C33011E00BFFAA8 /* Locations.swift */,
 				F896464F1C32FEA400BFFAA8 /* ViewController.swift */,
 				F89646511C32FEA400BFFAA8 /* Main.storyboard */,
+				F85D54F41C3992A4009310E9 /* MapViewController.swift */,
 				F896467B1C32FEAB00BFFAA8 /* Supporting Files */,
 			);
 			path = example;
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F896467D1C33011E00BFFAA8 /* Locations.swift in Sources */,
+				F85D54F51C3992A4009310E9 /* MapViewController.swift in Sources */,
 				F89646501C32FEA400BFFAA8 /* ViewController.swift in Sources */,
 				F85D54B51C388F6B009310E9 /* JSONDataTableViewController.swift in Sources */,
 				F896467F1C3302C400BFFAA8 /* ImageViewController.swift in Sources */,
