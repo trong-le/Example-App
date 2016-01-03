@@ -54,7 +54,17 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.addAnnotation(annotationCincinnati)
         
     }
-
+    
+    // Set up callout accessory view (Right info button)
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        var view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Seattle")
+        view.canShowCallout = true
+        let but = UIButton(type: .DetailDisclosure)
+        view.rightCalloutAccessoryView = but
+        
+        return view
+    }
     
 
     /*
