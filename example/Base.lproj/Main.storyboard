@@ -105,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0LW-ZK-a1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3073" y="-1620"/>
+            <point key="canvasLocation" x="3369" y="-298"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NT6-Su-N80">
@@ -246,6 +246,10 @@
                     <navigationItem key="navigationItem" id="c22-1M-7H0"/>
                     <connections>
                         <outlet property="mapView" destination="re1-E6-rzf" id="J7A-fR-BUP"/>
+                        <segue destination="esx-ux-LrX" kind="push" identifier="Seattle" id="2QG-XT-XEZ"/>
+                        <segue destination="esx-ux-LrX" kind="push" identifier="Hillsboro" id="80b-ye-0T8"/>
+                        <segue destination="esx-ux-LrX" kind="push" identifier="Cincinnati" id="a3r-SN-ZT5"/>
+                        <segue destination="esx-ux-LrX" kind="push" identifier="Columbus" id="yqB-qi-uok"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRc-Kc-XId" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,6 +278,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eE9-Ua-PIC"/>
+        <segue reference="yqB-qi-uok"/>
     </inferredMetricsTieBreakers>
 </document>
