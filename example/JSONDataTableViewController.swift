@@ -43,7 +43,7 @@ class JSONDataTableViewController: UITableViewController, NSURLSessionDataDelega
     
     // MARK: - Table view data source
 
-    // Only 1 section being reused numerous times
+    // Only 1 column
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }

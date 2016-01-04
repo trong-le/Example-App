@@ -150,7 +150,7 @@
         <!--JSON-->
         <scene sceneID="n2l-m0-Poa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TPy-51-qoK" sceneMemberID="viewController">
+                <navigationController title="JSON" automaticallyAdjustsScrollViewInsets="NO" id="TPy-51-qoK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="JSON" id="s3u-wR-xTI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kgn-v5-cK2">
@@ -167,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="1519" y="-658"/>
         </scene>
-        <!--Data Table View Controller-->
+        <!--JSON-->
         <scene sceneID="Csb-Fj-GQR">
             <objects>
-                <tableViewController id="NoN-eo-4Ky" customClass="JSONDataTableViewController" customModule="example" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="JSON" id="NoN-eo-4Ky" customClass="JSONDataTableViewController" customModule="example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="43" sectionHeaderHeight="28" sectionFooterHeight="28" id="HGQ-Aq-Xwx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,7 +189,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Xt-ID-REi">
@@ -197,7 +197,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -211,16 +211,16 @@
                             <outlet property="delegate" destination="NoN-eo-4Ky" id="txw-Yl-WQP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="83G-yI-q7A"/>
+                    <navigationItem key="navigationItem" title="JSON" id="83G-yI-q7A"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afy-UZ-r8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2231" y="-658"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map Kit-->
         <scene sceneID="fcq-XN-DEP">
             <objects>
-                <viewController id="sfc-uz-Mdf" customClass="MapViewController" customModule="example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Map Kit" id="sfc-uz-Mdf" customClass="MapViewController" customModule="example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lGt-lt-wto"/>
                         <viewControllerLayoutGuide type="bottom" id="cFY-D7-dtz"/>
@@ -243,23 +243,20 @@
                             <constraint firstAttribute="trailing" secondItem="re1-E6-rzf" secondAttribute="trailing" id="WTY-Db-cJK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="c22-1M-7H0"/>
+                    <navigationItem key="navigationItem" title="Map Kit" id="c22-1M-7H0"/>
                     <connections>
                         <outlet property="mapView" destination="re1-E6-rzf" id="J7A-fR-BUP"/>
-                        <segue destination="esx-ux-LrX" kind="push" identifier="Seattle" id="2QG-XT-XEZ"/>
-                        <segue destination="esx-ux-LrX" kind="push" identifier="Hillsboro" id="80b-ye-0T8"/>
-                        <segue destination="esx-ux-LrX" kind="push" identifier="Cincinnati" id="a3r-SN-ZT5"/>
-                        <segue destination="esx-ux-LrX" kind="push" identifier="Columbus" id="yqB-qi-uok"/>
+                        <segue destination="esx-ux-LrX" kind="show" identifier="PictureSegue" id="JXc-6Q-9x8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRc-Kc-XId" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2321" y="189"/>
         </scene>
-        <!--Map View-->
+        <!--Map Kit-->
         <scene sceneID="Ahf-6u-fb4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9N6-8X-j8n" sceneMemberID="viewController">
+                <navigationController title="Map Kit" automaticallyAdjustsScrollViewInsets="NO" id="9N6-8X-j8n" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map View" id="B3y-LC-Wr4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Tb-Gl-rGD">
@@ -278,6 +275,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yqB-qi-uok"/>
+        <segue reference="JXc-6Q-9x8"/>
     </inferredMetricsTieBreakers>
 </document>

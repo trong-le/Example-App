@@ -8,61 +8,54 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 private let identifier = "pin"
 
 class MapViewController: UIViewController, MKMapViewDelegate {
-
+    
     // Set map view delegate and view type
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
-            //mapView.mapType = .Satellite
+            mapView.mapType = .Satellite
             mapView.delegate = self
         }
     }
     
     // initialize identifiers for each city
-    private var seattleDescription: String = ""
-    private var hillsboroDescription: String = ""
-    private var columbusDescription: String = ""
-    private var cincinnatiDescription: String = ""
+    private var seattleDescription: String?
+    private var hillsboroDescription: String?
+    private var columbusDescription: String?
+    private var cincinnatiDescription: String?
+    
+    // City locations
+    let seattleLocation = CLLocationCoordinate2D(latitude: 47.6097, longitude: -122.3331)
+    let hillsboroLocation = CLLocationCoordinate2D(latitude: 39.2058, longitude: -83.6139)
+    let columbusLocation = CLLocationCoordinate2D(latitude: 39.9833, longitude: -82.9833)
+    let cincinnatiLocation = CLLocationCoordinate2D(latitude: 39.1000, longitude: -84.5167)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // City locations
-        let seattleLocation = CLLocationCoordinate2D(latitude: 47.6097, longitude: -122.3331)
-        let hillsboroLocation = CLLocationCoordinate2D(latitude: 39.2058, longitude: -83.6139)
-        let columbusLocation = CLLocationCoordinate2D(latitude: 39.9833, longitude: -82.9833)
-        let cincinnatiLocation = CLLocationCoordinate2D(latitude: 39.1000, longitude: -84.5167)
         
         // Add annotations and details
-        let annotationSeattle = MKPointAnnotation()
-        annotationSeattle.coordinate = seattleLocation
+        let annotationSeattle = MyAnnotation(coordinate: seattleLocation, city: .Seattle)
         annotationSeattle.title = "Seattle, Washington"
         annotationSeattle.subtitle = "Where I was born."
-        seattleDescription = annotationSeattle.description
         mapView.addAnnotation(annotationSeattle)
         
-        let annotationHillsboro = MKPointAnnotation()
-        annotationHillsboro.coordinate = hillsboroLocation
+        let annotationHillsboro = MyAnnotation(coordinate: hillsboroLocation, city: .Hillsboro)
         annotationHillsboro.title = "Hillsboro, Ohio"
         annotationHillsboro.subtitle = "Where I went to high school."
-        hillsboroDescription = annotationHillsboro.description
         mapView.addAnnotation(annotationHillsboro)
         
-        let annotationColumbus = MKPointAnnotation()
-        annotationColumbus.coordinate = columbusLocation
+        let annotationColumbus = MyAnnotation(coordinate: columbusLocation, city: .Columbus)
         annotationColumbus.title = "Columbus, Ohio"
         annotationColumbus.subtitle = "Where I attended college. Go Bucks!"
-        columbusDescription = annotationColumbus.description
         mapView.addAnnotation(annotationColumbus)
         
-        let annotationCincinnati = MKPointAnnotation()
-        annotationCincinnati.coordinate = cincinnatiLocation
+        let annotationCincinnati = MyAnnotation(coordinate: cincinnatiLocation, city: .Cincinnati)
         annotationCincinnati.title = "Cincinnati, Ohio"
         annotationCincinnati.subtitle = "Where I currently reside."
-        cincinnatiDescription = annotationCincinnati.description
         mapView.addAnnotation(annotationCincinnati)
         
     }
@@ -80,59 +73,69 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     // What the info button does
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        
-        // Compare view and city identifiers to perform segues
-        if control == view.rightCalloutAccessoryView {
-            if view.annotation?.description == seattleDescription {
-                return performSegueWithIdentifier("Seattle", sender: self)
-            }
-            
-            if view.annotation?.description == hillsboroDescription {
-                return performSegueWithIdentifier("Hillsboro", sender: self)
-            }
-            
-            if view.annotation?.description == columbusDescription {
-                return performSegueWithIdentifier("Columbus", sender: self)
-            }
-            
-            if view.annotation?.description == cincinnatiDescription {
-                return performSegueWithIdentifier("Cincinnati", sender: self)
-            }
-        }
+        performSegueWithIdentifier("PictureSegue", sender: view.annotation)
     }
     
     // Set up segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let ivc = segue.destinationViewController as? ImageViewController {
-            if let identifier = segue.identifier {
-                switch identifier {
-                case "Seattle":
+            if let myAnnotation = sender as? MyAnnotation {
+                switch myAnnotation.city {
+                case .Seattle:
                     ivc.imageURL = Locations.Seattle
                     ivc.title = "Seattle, Washington"
-                case "Hillsboro":
+                case .Hillsboro:
                     ivc.imageURL = Locations.Hillsboro
                     ivc.title = "Hillsboro, Ohio"
-                case "Columbus":
+                case .Columbus:
                     ivc.imageURL = Locations.Columbus
                     ivc.title = "Columbus, Ohio"
-                case "Cincinnati":
+                case .Cincinnati:
                     ivc.imageURL = Locations.Cincinnati
                     ivc.title = "Cincinnati, Ohio"
-                default: break
                 }
             }
         }
     }
-
-
+    
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
+    
+}
 
+
+class MyAnnotation: NSObject, MKAnnotation {
+    
+    enum MyCities {
+        case Seattle
+        case Hillsboro
+        case Columbus
+        case Cincinnati
+    }
+    
+    private var _coordinate: CLLocationCoordinate2D
+    // Create since coordinate is read-only
+    var coordinate: CLLocationCoordinate2D {
+        get {
+            return _coordinate
+        }
+    }
+    
+    var title: String?
+    var subtitle: String?
+    var city: MyCities
+    
+    init(coordinate: CLLocationCoordinate2D, city: MyCities) {
+        self._coordinate = coordinate
+        self.city = city
+        super.init()
+    }
 }
