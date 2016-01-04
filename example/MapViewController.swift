@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-private let identifier = "Seattle"
+private let identifier = "pin"
 
 class MapViewController: UIViewController, MKMapViewDelegate {
 
@@ -21,6 +21,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    // initialize identifiers for each city
     private var seattleDescription: String = ""
     private var hillsboroDescription: String = ""
     private var columbusDescription: String = ""
@@ -35,7 +36,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let columbusLocation = CLLocationCoordinate2D(latitude: 39.9833, longitude: -82.9833)
         let cincinnatiLocation = CLLocationCoordinate2D(latitude: 39.1000, longitude: -84.5167)
         
-        // Add annotations
+        // Add annotations and details
         let annotationSeattle = MKPointAnnotation()
         annotationSeattle.coordinate = seattleLocation
         annotationSeattle.title = "Seattle, Washington"
@@ -80,6 +81,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     // What the info button does
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
+        // Compare view and city identifiers to perform segues
         if control == view.rightCalloutAccessoryView {
             if view.annotation?.description == seattleDescription {
                 return performSegueWithIdentifier("Seattle", sender: self)
@@ -99,6 +101,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    // Set up segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let ivc = segue.destinationViewController as? ImageViewController {
             if let identifier = segue.identifier {
