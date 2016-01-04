@@ -111,7 +111,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
 }
 
-
+// Create class with annotation protocols plus cities
 class MyAnnotation: NSObject, MKAnnotation {
     
     enum MyCities {
@@ -129,10 +129,12 @@ class MyAnnotation: NSObject, MKAnnotation {
         }
     }
     
+    // Follow MKAnnotation protocols
     var title: String?
     var subtitle: String?
     var city: MyCities
     
+    // Initialize
     init(coordinate: CLLocationCoordinate2D, city: MyCities) {
         self._coordinate = coordinate
         self.city = city
