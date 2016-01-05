@@ -36,8 +36,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addAnnotations()
         
-        // Add annotations and details
+    }
+    
+    // Add annotations and details
+    private func addAnnotations() {
+        
         let annotationSeattle = MyAnnotation(coordinate: seattleLocation, city: .Seattle)
         annotationSeattle.title = "Seattle, Washington"
         annotationSeattle.subtitle = "Where I was born."
@@ -57,14 +62,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         annotationCincinnati.title = "Cincinnati, Ohio"
         annotationCincinnati.subtitle = "Where I currently reside."
         mapView.addAnnotation(annotationCincinnati)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyPressed:", name: "Ayy", object: nil)
-        
-    }
-    
-    func keyPressed() {
-        NSNotificationCenter.defaultCenter().postNotificationName("Pressed", object: nil)
-        print("Checl")
     }
     
     // Set up callout accessory view (Right info button)
