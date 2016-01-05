@@ -167,11 +167,11 @@
             </objects>
             <point key="canvasLocation" x="502" y="-658"/>
         </scene>
-        <!--About me-->
+        <!--Login-->
         <scene sceneID="UJz-m1-k0d">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0rh-uT-6WS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About me" id="7b0-PV-oSt"/>
+                    <tabBarItem key="tabBarItem" title="Login" id="7b0-PV-oSt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d3x-Et-pzk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
