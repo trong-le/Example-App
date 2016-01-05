@@ -30,7 +30,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0l-Hn-maW">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0l-Hn-maW">
                                 <rect key="frame" x="245" y="72" width="110" height="110"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,7 +39,7 @@
                                     <constraint firstAttribute="height" constant="110" id="OeM-JT-bNV"/>
                                 </constraints>
                                 <state key="normal" title="Choose Photo">
-                                    <color key="titleColor" red="0.97645798125596739" green="0.95500186716988167" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -67,23 +67,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nQn-Z1-6HY">
+                                <rect key="frame" x="245" y="72" width="110" height="110"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" label="">
+                                    <accessibilityTraits key="traits" image="YES" staticText="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="6pZ-Uw-2Tc"/>
+                                    <constraint firstAttribute="height" constant="110" id="m8n-rJ-vHe"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="55"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="haP-v4-cMF" firstAttribute="leading" secondItem="Wa1-UE-r1c" secondAttribute="leadingMargin" id="14T-Fj-HZ8"/>
                             <constraint firstItem="lDn-V2-VR7" firstAttribute="top" secondItem="Y0l-Hn-maW" secondAttribute="bottom" constant="23" id="7Gj-tf-xC3"/>
+                            <constraint firstItem="nQn-Z1-6HY" firstAttribute="centerX" secondItem="Wa1-UE-r1c" secondAttribute="centerX" id="Cuk-zI-mSN"/>
                             <constraint firstItem="lDn-V2-VR7" firstAttribute="trailing" secondItem="Wa1-UE-r1c" secondAttribute="trailingMargin" id="JDo-3z-V6x"/>
                             <constraint firstItem="haP-v4-cMF" firstAttribute="top" secondItem="GJZ-qu-kZ4" secondAttribute="bottom" constant="144" id="Lku-dm-zyc"/>
                             <constraint firstItem="rmN-Wu-UKt" firstAttribute="top" secondItem="lDn-V2-VR7" secondAttribute="bottom" constant="50" id="T7r-q0-dph"/>
                             <constraint firstItem="rmN-Wu-UKt" firstAttribute="centerX" secondItem="Wa1-UE-r1c" secondAttribute="centerX" id="YpU-dS-6De"/>
                             <constraint firstItem="Y0l-Hn-maW" firstAttribute="top" secondItem="GJZ-qu-kZ4" secondAttribute="bottom" constant="8" id="ajD-vP-afe"/>
+                            <constraint firstItem="nQn-Z1-6HY" firstAttribute="top" secondItem="GJZ-qu-kZ4" secondAttribute="bottom" constant="8" id="bxT-Lx-qaR"/>
                             <constraint firstItem="Y0l-Hn-maW" firstAttribute="centerX" secondItem="Wa1-UE-r1c" secondAttribute="centerX" id="ex0-7J-zP8"/>
                             <constraint firstItem="lDn-V2-VR7" firstAttribute="leading" secondItem="haP-v4-cMF" secondAttribute="trailing" constant="8" id="rJd-x6-kJy"/>
+                            <constraint firstItem="lDn-V2-VR7" firstAttribute="top" secondItem="nQn-Z1-6HY" secondAttribute="bottom" constant="23" id="uON-lu-8V3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="kle-dz-j0P"/>
                     <connections>
+                        <outlet property="photoLabel" destination="Y0l-Hn-maW" id="rAG-w7-ssT"/>
+                        <outlet property="userImage" destination="nQn-Z1-6HY" id="Hbr-Cj-k8S"/>
                         <outlet property="usernameField" destination="lDn-V2-VR7" id="dd2-DN-mdz"/>
                     </connections>
                 </viewController>

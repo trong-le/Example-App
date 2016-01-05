@@ -10,17 +10,28 @@ import UIKit
 
 class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    // Declare outlets
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var photoLabel: UIButton!
     
+    // Button action to open photo library
     @IBAction func openPhotoLibrary(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
-            var imagePicker = UIImagePickerController()
+            let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
             self.presentViewController(imagePicker, animated: true, completion: nil)
             
         }
+    }
+    
+    // Change image view to image and get rid of photo label
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        userImage.image = image
+        self.dismissViewControllerAnimated(true, completion: nil);
+        photoLabel.alpha = 0
     }
     
     override func viewDidLoad() {
