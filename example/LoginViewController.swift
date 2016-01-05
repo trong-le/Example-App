@@ -14,14 +14,21 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var photoLabel: UIButton!
-    var name: String?
+    var name: String? = ""
     
-    // Set up display.
+    // Set up submit button
     @IBAction func submitButton(sender: UIButton) {
         name = usernameField.text
-        let alert = UIAlertController(title: "Alert View", message: "Hello \(name!)!", preferredStyle: .Alert)
-        self.presentViewController(alert, animated: true, completion: nil)
-        alert.addAction(UIAlertAction(title: "Exit", style: .Default, handler: nil))
+        if name != "" {
+            let alert = UIAlertController(title: "Alert View", message: "Hello \(name!)!", preferredStyle: .Alert)
+            self.presentViewController(alert, animated: true, completion: nil)
+            alert.addAction(UIAlertAction(title: "Exit", style: .Default, handler: nil))
+        } else {
+            let alert = UIAlertController(title: "Alert View", message: "No name inputted.", preferredStyle: .Alert)
+            self.presentViewController(alert, animated: true, completion: nil)
+            alert.addAction(UIAlertAction(title: "Exit", style: .Default, handler: nil))
+        }
+        
     }
     
     // Button action to open photo library
@@ -58,15 +65,5 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         usernameField.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
