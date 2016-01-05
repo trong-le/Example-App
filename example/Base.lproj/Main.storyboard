@@ -69,6 +69,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitButton:" destination="gqq-5y-0ho" eventType="touchUpInside" id="NPO-99-Bhy"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nQn-Z1-6HY">
                                 <rect key="frame" x="245" y="72" width="110" height="110"/>

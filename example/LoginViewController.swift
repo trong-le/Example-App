@@ -8,12 +8,21 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UIAlertViewDelegate {
 
     // Declare outlets
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var photoLabel: UIButton!
+    var name: String?
+    
+    // Set up display.
+    @IBAction func submitButton(sender: UIButton) {
+        name = usernameField.text
+        let alert = UIAlertController(title: "Alert View", message: "Hello \(name!)!", preferredStyle: .Alert)
+        self.presentViewController(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Exit", style: .Default, handler: nil))
+    }
     
     // Button action to open photo library
     @IBAction func openPhotoLibrary(sender: AnyObject) {
