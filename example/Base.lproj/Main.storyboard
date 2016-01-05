@@ -2,75 +2,68 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lpe-ou-xnY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Where am I from?-->
-        <scene sceneID="JfI-Sf-N2T">
+        <!--Login-->
+        <scene sceneID="Efh-Kq-kL0">
             <objects>
-                <viewController id="ia2-ya-Dgc" customClass="ViewController" customModule="example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gqq-5y-0ho" customClass="LoginViewController" customModule="example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NVe-YB-HgM"/>
-                        <viewControllerLayoutGuide type="bottom" id="PKV-aR-5zH"/>
+                        <viewControllerLayoutGuide type="top" id="GJZ-qu-kZ4"/>
+                        <viewControllerLayoutGuide type="bottom" id="y6w-sP-pXF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Mjc-Db-S22">
+                    <view key="view" contentMode="scaleToFill" id="Wa1-UE-r1c">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eB-YX-k8z">
-                                <rect key="frame" x="215" y="334" width="172" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkW-Z6-V1p">
+                                <rect key="frame" x="22" y="113" width="74" height="21"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Columbus, Ohio"/>
-                                <connections>
-                                    <segue destination="esx-ux-LrX" kind="show" identifier="Columbus" id="lJj-Ui-R0o"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZf-Xw-fuR">
-                                <rect key="frame" x="216" y="383" width="170" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lDn-V2-VR7">
+                                <rect key="frame" x="107" y="72" width="473" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Cincinnati, Ohio"/>
-                                <connections>
-                                    <segue destination="esx-ux-LrX" kind="show" identifier="Cincinnati" id="elb-1l-FHS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKw-dY-hpf">
-                                <rect key="frame" x="194" y="231" width="214" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XU1-tD-7np">
+                                <rect key="frame" x="107" y="110" width="473" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Seattle, Washington"/>
-                                <connections>
-                                    <segue destination="esx-ux-LrX" kind="show" identifier="Seattle" id="eE9-Ua-PIC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31u-FC-VUu">
-                                <rect key="frame" x="222" y="280" width="157" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haP-v4-cMF">
+                                <rect key="frame" x="20" y="75" width="79" height="21"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Hillsboro, Ohio"/>
-                                <connections>
-                                    <segue destination="esx-ux-LrX" kind="show" identifier="Hillsboro" id="0b8-Wb-vEd"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4eB-YX-k8z" firstAttribute="centerX" secondItem="31u-FC-VUu" secondAttribute="centerX" id="1G8-BY-lIu"/>
-                            <constraint firstItem="4eB-YX-k8z" firstAttribute="top" secondItem="31u-FC-VUu" secondAttribute="bottom" constant="13" id="1sc-SX-Nh0"/>
-                            <constraint firstItem="31u-FC-VUu" firstAttribute="top" secondItem="ZKw-dY-hpf" secondAttribute="bottom" constant="8" symbolic="YES" id="7e9-FS-jsc"/>
-                            <constraint firstItem="FZf-Xw-fuR" firstAttribute="top" secondItem="4eB-YX-k8z" secondAttribute="bottom" constant="8" symbolic="YES" id="Dhz-9x-jjU"/>
-                            <constraint firstItem="31u-FC-VUu" firstAttribute="centerX" secondItem="Mjc-Db-S22" secondAttribute="centerX" id="Sgk-1r-Tog"/>
-                            <constraint firstItem="31u-FC-VUu" firstAttribute="centerY" secondItem="Mjc-Db-S22" secondAttribute="centerY" id="Tds-tn-YRA"/>
-                            <constraint firstItem="31u-FC-VUu" firstAttribute="centerX" secondItem="ZKw-dY-hpf" secondAttribute="centerX" id="mj7-gf-LUo"/>
-                            <constraint firstItem="4eB-YX-k8z" firstAttribute="centerX" secondItem="FZf-Xw-fuR" secondAttribute="centerX" id="p9N-XY-Zfw"/>
+                            <constraint firstItem="nkW-Z6-V1p" firstAttribute="top" secondItem="haP-v4-cMF" secondAttribute="bottom" constant="17" id="6Nh-B5-aRr"/>
+                            <constraint firstItem="lDn-V2-VR7" firstAttribute="leading" secondItem="haP-v4-cMF" secondAttribute="trailing" constant="8" id="6kJ-9m-Zhe"/>
+                            <constraint firstItem="lDn-V2-VR7" firstAttribute="top" secondItem="GJZ-qu-kZ4" secondAttribute="bottom" constant="8" id="ICS-8v-3HJ"/>
+                            <constraint firstItem="XU1-tD-7np" firstAttribute="top" secondItem="lDn-V2-VR7" secondAttribute="bottom" constant="8" id="J5f-by-tVc"/>
+                            <constraint firstItem="haP-v4-cMF" firstAttribute="top" secondItem="GJZ-qu-kZ4" secondAttribute="bottom" constant="11" id="UtY-y6-StL"/>
+                            <constraint firstItem="XU1-tD-7np" firstAttribute="leading" secondItem="nkW-Z6-V1p" secondAttribute="trailing" constant="11" id="cit-Xs-f1X"/>
+                            <constraint firstItem="lDn-V2-VR7" firstAttribute="trailing" secondItem="Wa1-UE-r1c" secondAttribute="trailingMargin" id="eGD-Nr-f7a"/>
+                            <constraint firstItem="XU1-tD-7np" firstAttribute="trailing" secondItem="Wa1-UE-r1c" secondAttribute="trailingMargin" id="ldf-QV-uZZ"/>
+                            <constraint firstItem="haP-v4-cMF" firstAttribute="leading" secondItem="Wa1-UE-r1c" secondAttribute="leadingMargin" id="qf3-ut-ftr"/>
+                            <constraint firstItem="nkW-Z6-V1p" firstAttribute="leading" secondItem="Wa1-UE-r1c" secondAttribute="leadingMargin" constant="2" id="t3J-aw-8eX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Where am I from?" id="rMf-Na-270"/>
+                    <navigationItem key="navigationItem" title="Login" id="kle-dz-j0P"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m3F-Cu-7Qf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tRh-lA-uqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2231" y="-1636"/>
+            <point key="canvasLocation" x="2412" y="-1636"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="Fv2-5w-JTR">
@@ -105,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0LW-ZK-a1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3369" y="-298"/>
+            <point key="canvasLocation" x="2921" y="-630"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NT6-Su-N80">
@@ -140,7 +133,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ia2-ya-Dgc" kind="relationship" relationship="rootViewController" id="g2f-6L-Qsl"/>
+                        <segue destination="gqq-5y-0ho" kind="relationship" relationship="rootViewController" id="8tV-yb-SWV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jta-WA-BKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,7 +267,4 @@
             <point key="canvasLocation" x="1519" y="189"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="JXc-6Q-9x8"/>
-    </inferredMetricsTieBreakers>
 </document>

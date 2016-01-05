@@ -58,6 +58,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         annotationCincinnati.subtitle = "Where I currently reside."
         mapView.addAnnotation(annotationCincinnati)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyPressed:", name: "Ayy", object: nil)
+        
+    }
+    
+    func keyPressed() {
+        NSNotificationCenter.defaultCenter().postNotificationName("Pressed", object: nil)
+        print("Checl")
     }
     
     // Set up callout accessory view (Right info button)
