@@ -22,6 +22,9 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gqq-5y-0ho" id="7oG-BN-LjI"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haP-v4-cMF">
                                 <rect key="frame" x="20" y="208" width="45" height="21"/>
@@ -105,7 +108,7 @@
                     <connections>
                         <outlet property="photoLabel" destination="Y0l-Hn-maW" id="rAG-w7-ssT"/>
                         <outlet property="userImage" destination="nQn-Z1-6HY" id="Hbr-Cj-k8S"/>
-                        <outlet property="usernameField" destination="lDn-V2-VR7" id="dd2-DN-mdz"/>
+                        <outlet property="usernameField" destination="lDn-V2-VR7" id="tM2-Xa-In6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRh-lA-uqn" userLabel="First Responder" sceneMemberID="firstResponder"/>

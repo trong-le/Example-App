@@ -8,11 +8,10 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     // Declare outlets
     @IBOutlet weak var usernameField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var photoLabel: UIButton!
     
@@ -34,9 +33,20 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         photoLabel.alpha = 0
     }
     
+    // Dismiss keyboard when pressed outside text field
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.usernameField.resignFirstResponder()
+    }
+    
+    // Dismiss keyboard when return is pressed
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        usernameField.delegate = self
     }
     
 
