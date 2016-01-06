@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F822CDF31C3CA0BD00E307E8 /* BlockBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822CDF21C3CA0BD00E307E8 /* BlockBehavior.swift */; settings = {ASSET_TAGS = (); }; };
 		F82D14441C3B5CEF00D14373 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82D14431C3B5CEF00D14373 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F85D54B51C388F6B009310E9 /* JSONDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85D54B41C388F6B009310E9 /* JSONDataTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F85D54F31C398F39009310E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85D54F21C398F39009310E9 /* MapKit.framework */; };
@@ -41,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F822CDF21C3CA0BD00E307E8 /* BlockBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockBehavior.swift; sourceTree = "<group>"; };
 		F82D14431C3B5CEF00D14373 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F85D54B41C388F6B009310E9 /* JSONDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDataTableViewController.swift; sourceTree = "<group>"; };
 		F85D54F21C398F39009310E9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -118,7 +116,6 @@
 				F85D54F41C3992A4009310E9 /* MapViewController.swift */,
 				F896467E1C3302C400BFFAA8 /* ImageViewController.swift */,
 				F896467C1C33011E00BFFAA8 /* Locations.swift */,
-				F822CDF21C3CA0BD00E307E8 /* BlockBehavior.swift */,
 				F89646511C32FEA400BFFAA8 /* Main.storyboard */,
 				F8FA9C8E1C3DCF7400F7DE58 /* SpaceViewController.swift */,
 				F896467B1C32FEAB00BFFAA8 /* Supporting Files */,
@@ -286,7 +283,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F82D14441C3B5CEF00D14373 /* LoginViewController.swift in Sources */,
-				F822CDF31C3CA0BD00E307E8 /* BlockBehavior.swift in Sources */,
 				F896467D1C33011E00BFFAA8 /* Locations.swift in Sources */,
 				F8FA9C8F1C3DCF7400F7DE58 /* SpaceViewController.swift in Sources */,
 				F85D54F51C3992A4009310E9 /* MapViewController.swift in Sources */,
