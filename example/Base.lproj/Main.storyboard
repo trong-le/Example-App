@@ -109,6 +109,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="kle-dz-j0P"/>
                     <connections>
+                        <outlet property="nameLabel" destination="haP-v4-cMF" id="VxF-Ce-7bb"/>
                         <outlet property="photoLabel" destination="Y0l-Hn-maW" id="rAG-w7-ssT"/>
                         <outlet property="userImage" destination="nQn-Z1-6HY" id="Hbr-Cj-k8S"/>
                         <outlet property="usernameField" destination="lDn-V2-VR7" id="tM2-Xa-In6"/>
@@ -116,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRh-lA-uqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="-1636"/>
+            <point key="canvasLocation" x="2412" y="-1908"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="Fv2-5w-JTR">
@@ -151,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0LW-ZK-a1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3117" y="189"/>
+            <point key="canvasLocation" x="3223" y="-109"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NT6-Su-N80">
@@ -167,11 +168,12 @@
                         <segue destination="0rh-uT-6WS" kind="relationship" relationship="viewControllers" id="GVK-rV-Gle"/>
                         <segue destination="TPy-51-qoK" kind="relationship" relationship="viewControllers" id="hSV-gg-LDc"/>
                         <segue destination="9N6-8X-j8n" kind="relationship" relationship="viewControllers" id="vVP-bc-X8p"/>
+                        <segue destination="ajI-Qu-P6H" kind="relationship" relationship="viewControllers" id="6Y0-Ww-n8I"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHb-AU-t6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="502" y="-658"/>
+            <point key="canvasLocation" x="678" y="-900"/>
         </scene>
         <!--Login-->
         <scene sceneID="UJz-m1-k0d">
@@ -191,7 +193,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jta-WA-BKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1519" y="-1636"/>
+            <point key="canvasLocation" x="1519" y="-1908"/>
         </scene>
         <!--JSON-->
         <scene sceneID="n2l-m0-Poa">
@@ -211,7 +213,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jit-6d-H7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1519" y="-658"/>
+            <point key="canvasLocation" x="1519" y="-1008"/>
         </scene>
         <!--JSON-->
         <scene sceneID="Csb-Fj-GQR">
@@ -261,7 +263,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afy-UZ-r8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2231" y="-658"/>
+            <point key="canvasLocation" x="2412" y="-1008"/>
         </scene>
         <!--Map Kit-->
         <scene sceneID="fcq-XN-DEP">
@@ -297,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRc-Kc-XId" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2321" y="189"/>
+            <point key="canvasLocation" x="2412" y="-109"/>
         </scene>
         <!--Map Kit-->
         <scene sceneID="Ahf-6u-fb4">
@@ -317,7 +319,176 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ee-WF-s5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1519" y="189"/>
+            <point key="canvasLocation" x="1519" y="-45"/>
+        </scene>
+        <!--Animation-->
+        <scene sceneID="WLU-VJ-NMZ">
+            <objects>
+                <navigationController title="Animation" automaticallyAdjustsScrollViewInsets="NO" id="ajI-Qu-P6H" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Animation" id="fv7-hC-PLX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pcA-3d-CJg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xth-zZ-8TX" kind="relationship" relationship="rootViewController" id="Ux5-vg-gvz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ukj-z0-fJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="191"/>
+        </scene>
+        <!--Space View Controller-->
+        <scene sceneID="kh6-di-xKn">
+            <objects>
+                <viewController id="xth-zZ-8TX" customClass="SpaceViewController" customModule="example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aIu-yn-Z82"/>
+                        <viewControllerLayoutGuide type="bottom" id="dq9-MU-FzG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="swz-nA-2Bb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space_background" translatesAutoresizingMaskIntoConstraints="NO" id="g19-nt-pS4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Astronaut Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X02-7p-SC1">
+                                <rect key="frame" x="212" y="111" width="177" height="26"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0mG-bd-1qV">
+                                <rect key="frame" x="180" y="145" width="240" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="c8Q-G7-HO4"/>
+                                    <constraint firstAttribute="width" constant="240" id="dWe-LJ-2Pr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" keyboardAppearance="light" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VDc-Ax-v7f">
+                                <rect key="frame" x="180" y="184" width="240" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="507-vc-h4J"/>
+                                    <constraint firstAttribute="height" constant="30" id="ggD-cn-LEn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" keyboardAppearance="light" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Du5-qC-amv">
+                                <rect key="frame" x="200" y="237" width="200" height="52"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.62745098040000002" green="0.83921568629999999" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="N5Y-pL-ko9"/>
+                                    <constraint firstAttribute="height" constant="52" id="VXj-PX-tO0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
+                                <color key="tintColor" red="0.0" green="0.40784313729999999" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login" destination="xth-zZ-8TX" eventType="touchUpInside" id="rxw-sw-cjB"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close-up_of_Sirius" translatesAutoresizingMaskIntoConstraints="NO" id="Cnf-rL-IkI">
+                                <rect key="frame" x="63" y="78" width="14" height="16"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14" id="2J7-3D-Cem"/>
+                                    <constraint firstAttribute="height" constant="16" id="VP5-mH-deD"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close-up_of_Sirius" translatesAutoresizingMaskIntoConstraints="NO" id="rP8-pY-Cpb">
+                                <rect key="frame" x="491" y="94" width="14" height="16"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14" id="1Pe-ox-X26"/>
+                                    <constraint firstAttribute="height" constant="16" id="AzG-gK-GBN"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close-up_of_Sirius" translatesAutoresizingMaskIntoConstraints="NO" id="sXb-eA-X4H">
+                                <rect key="frame" x="454" y="498" width="14" height="16"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="XWd-W3-9eL"/>
+                                    <constraint firstAttribute="width" constant="14" id="g1A-oR-g3V"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close-up_of_Sirius" translatesAutoresizingMaskIntoConstraints="NO" id="m6l-Ih-PIb">
+                                <rect key="frame" x="366" y="327" width="14" height="16"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14" id="4Wd-Yp-PbY"/>
+                                    <constraint firstAttribute="height" constant="16" id="aWo-uP-CFH"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close-up_of_Sirius" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-Dv-bbX">
+                                <rect key="frame" x="146" y="474" width="14" height="16"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="65G-s0-OAp"/>
+                                    <constraint firstAttribute="width" constant="14" id="GqG-A2-Jdy"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sXb-eA-X4H" firstAttribute="leading" secondItem="g19-nt-pS4" secondAttribute="trailing" constant="-146" id="180-uk-YgC"/>
+                            <constraint firstItem="0mG-bd-1qV" firstAttribute="centerX" secondItem="swz-nA-2Bb" secondAttribute="centerX" id="1HY-1S-aKQ"/>
+                            <constraint firstAttribute="trailing" secondItem="g19-nt-pS4" secondAttribute="trailing" id="9Fu-O7-tDV"/>
+                            <constraint firstItem="g19-nt-pS4" firstAttribute="leading" secondItem="bWt-Dv-bbX" secondAttribute="trailing" constant="-160" id="9Yi-D4-UKZ"/>
+                            <constraint firstItem="Du5-qC-amv" firstAttribute="top" secondItem="VDc-Ax-v7f" secondAttribute="bottom" constant="23" id="DSI-bJ-CE7"/>
+                            <constraint firstItem="g19-nt-pS4" firstAttribute="top" secondItem="X02-7p-SC1" secondAttribute="bottom" constant="-137" id="FTK-fD-gyw"/>
+                            <constraint firstItem="dq9-MU-FzG" firstAttribute="top" secondItem="bWt-Dv-bbX" secondAttribute="bottom" constant="61" id="Jxj-fB-WzU"/>
+                            <constraint firstItem="rP8-pY-Cpb" firstAttribute="leading" secondItem="g19-nt-pS4" secondAttribute="trailing" constant="-109" id="LHx-PV-W9W"/>
+                            <constraint firstItem="g19-nt-pS4" firstAttribute="leading" secondItem="Cnf-rL-IkI" secondAttribute="trailing" constant="-77" id="Nzv-sK-tnb"/>
+                            <constraint firstItem="Du5-qC-amv" firstAttribute="centerX" secondItem="swz-nA-2Bb" secondAttribute="centerX" id="QGZ-8b-Zio"/>
+                            <constraint firstItem="m6l-Ih-PIb" firstAttribute="leading" secondItem="g19-nt-pS4" secondAttribute="trailing" constant="-234" id="Sv9-9K-Cxp"/>
+                            <constraint firstItem="dq9-MU-FzG" firstAttribute="top" secondItem="sXb-eA-X4H" secondAttribute="bottom" constant="37" id="UKT-L8-kVE"/>
+                            <constraint firstItem="g19-nt-pS4" firstAttribute="top" secondItem="Cnf-rL-IkI" secondAttribute="bottom" constant="-94" id="ZjW-iX-2KR"/>
+                            <constraint firstItem="0mG-bd-1qV" firstAttribute="top" secondItem="X02-7p-SC1" secondAttribute="bottom" constant="8" id="Zrc-tU-E2R"/>
+                            <constraint firstItem="g19-nt-pS4" firstAttribute="top" secondItem="swz-nA-2Bb" secondAttribute="top" id="dLX-6P-TIr"/>
+                            <constraint firstItem="dq9-MU-FzG" firstAttribute="top" secondItem="m6l-Ih-PIb" secondAttribute="bottom" constant="208" id="dwv-0A-qAr"/>
+                            <constraint firstItem="X02-7p-SC1" firstAttribute="centerX" secondItem="g19-nt-pS4" secondAttribute="centerX" id="fiN-ej-cXf"/>
+                            <constraint firstItem="g19-nt-pS4" firstAttribute="leading" secondItem="swz-nA-2Bb" secondAttribute="leading" id="hfj-L2-uUP"/>
+                            <constraint firstItem="g19-nt-pS4" firstAttribute="top" secondItem="rP8-pY-Cpb" secondAttribute="bottom" constant="-110" id="mf4-1g-Eu4"/>
+                            <constraint firstItem="VDc-Ax-v7f" firstAttribute="top" secondItem="0mG-bd-1qV" secondAttribute="bottom" constant="9" id="oMk-64-Dwi"/>
+                            <constraint firstItem="dq9-MU-FzG" firstAttribute="top" secondItem="g19-nt-pS4" secondAttribute="bottom" id="tSk-cp-j8j"/>
+                            <constraint firstItem="VDc-Ax-v7f" firstAttribute="centerX" secondItem="swz-nA-2Bb" secondAttribute="centerX" id="yLO-g4-QJk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sMV-s5-Sax"/>
+                    <connections>
+                        <outlet property="bottomMiddleStar" destination="bWt-Dv-bbX" id="Yj0-vX-gaO"/>
+                        <outlet property="bottomRightStar" destination="sXb-eA-X4H" id="7LQ-xh-EAo"/>
+                        <outlet property="heading" destination="X02-7p-SC1" id="yC4-qn-mL6"/>
+                        <outlet property="loginButton" destination="Du5-qC-amv" id="pK2-7A-0F7"/>
+                        <outlet property="middleStar" destination="m6l-Ih-PIb" id="jF9-rZ-Z7c"/>
+                        <outlet property="password" destination="VDc-Ax-v7f" id="9kF-Rf-hlJ"/>
+                        <outlet property="topLeftStar" destination="Cnf-rL-IkI" id="7sa-Tj-7Iu"/>
+                        <outlet property="topRightStar" destination="rP8-pY-Cpb" id="Nj5-WJ-L2a"/>
+                        <outlet property="username" destination="0mG-bd-1qV" id="EBh-Bq-reK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FE1-7I-bJJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="995"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Close-up_of_Sirius" width="87" height="74"/>
+        <image name="space_background" width="640" height="1136"/>
+    </resources>
 </document>

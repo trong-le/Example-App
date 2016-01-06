@@ -14,6 +14,7 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var photoLabel: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
     var name: String? = ""
     
     // Set up submit button
@@ -65,5 +66,4 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         usernameField.delegate = self
     }
     
-
 }
