@@ -20,7 +20,6 @@ func delay (seconds seconds: Double, completion:()->()) {
 
 class SpaceViewController: UIViewController {
 
-    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var heading: UILabel!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -31,19 +30,60 @@ class SpaceViewController: UIViewController {
     @IBOutlet weak var bottomMiddleStar: UIImageView!
     @IBOutlet weak var bottomRightStar: UIImageView!
     
+    @IBOutlet weak var usernameVerticalConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var loginButton: UIButton! {
+        didSet {
+            loginButton.layer.cornerRadius = 8.0
+        }
+    }
+    
+    // Login layout constraints
+    @IBOutlet weak var loginWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var loginVerticalSpacingConstraint: NSLayoutConstraint!
+    
+    // Set up login animation actions and spinner animation actions
+    @IBAction func loginAction(sender: AnyObject) {
+        
+        self.loginWidthConstraint.constant *= 1.33
+        self.loginVerticalSpacingConstraint.constant *= 2.5
+        self.loginButton.backgroundColor = UIColor(red: 0.85, green: 0.83, blue: 0.45, alpha: 1.0)
+        
+        self.spinner.center = CGPoint(x: 40, y: self.loginButton.frame.size.height/2)
+        self.spinner.alpha = 1.0
+        
+        
+        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.0, options: [], animations: {
+            self.view.setNeedsLayout()
+            self.view.layoutIfNeeded()
+            }, completion: nil)
+        
+    }
     
     
     let spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
     let status = UIImageView(image: UIImage(named: "banner"))
     let label = UILabel()
-    let messages = ["Connecting ...", "Authorizing ...", "Contacting NASA ...", "Failed"]
+    let messages = ["Connecting ...", "Baking Cookies ...", "Contacting NASA ...", "Failed"]
     
     var statusPosition = CGPoint.zero
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        // Set up spinner
+        spinner.frame = CGRect(x: 20.0, y: 16, width: 20.0, height: 20.0)
+        spinner.startAnimating()
+        spinner.alpha = 0.0
+        loginButton.addSubview(spinner)
+        
+        // Set up status banner
+        status.hidden = true
+        status.center = loginButton.center
+        status.frame = CGRect(x: loginButton.center.x/4+12, y: loginButton.center.y-15, width: 200, height: 26)
+        view.addSubview(status)
+        
     }
     
     override func viewWillAppear(animated: Bool) {

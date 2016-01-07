@@ -368,8 +368,8 @@
                                 <rect key="frame" x="180" y="145" width="240" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="c8Q-G7-HO4"/>
-                                    <constraint firstAttribute="width" constant="240" id="dWe-LJ-2Pr"/>
+                                    <constraint firstAttribute="height" constant="30" identifier="usernameHeightConstraint" id="c8Q-G7-HO4"/>
+                                    <constraint firstAttribute="width" constant="240" identifier="usernameWidthConstraint" id="dWe-LJ-2Pr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" keyboardAppearance="light" enablesReturnKeyAutomatically="YES"/>
@@ -398,7 +398,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="login" destination="xth-zZ-8TX" eventType="touchUpInside" id="rxw-sw-cjB"/>
+                                    <action selector="loginAction:" destination="xth-zZ-8TX" eventType="touchUpInside" id="2mW-wH-8CZ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close-up_of_Sirius" translatesAutoresizingMaskIntoConstraints="NO" id="Cnf-rL-IkI">
@@ -421,8 +421,8 @@
                                 <rect key="frame" x="454" y="498" width="14" height="16"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="XWd-W3-9eL"/>
-                                    <constraint firstAttribute="width" constant="14" id="g1A-oR-g3V"/>
+                                    <constraint firstAttribute="height" constant="16" id="1cK-lz-oDX"/>
+                                    <constraint firstAttribute="width" constant="14" id="sIl-ky-wd4"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close-up_of_Sirius" translatesAutoresizingMaskIntoConstraints="NO" id="m6l-Ih-PIb">
@@ -434,11 +434,11 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close-up_of_Sirius" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-Dv-bbX">
-                                <rect key="frame" x="146" y="474" width="14" height="16"/>
+                                <rect key="frame" x="36" y="432" width="14" height="16"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="65G-s0-OAp"/>
-                                    <constraint firstAttribute="width" constant="14" id="GqG-A2-Jdy"/>
+                                    <constraint firstAttribute="width" constant="14" id="MmN-an-wUW"/>
+                                    <constraint firstAttribute="height" constant="16" id="YDM-DQ-VQi"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -446,35 +446,43 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sXb-eA-X4H" firstAttribute="leading" secondItem="g19-nt-pS4" secondAttribute="trailing" constant="-146" id="180-uk-YgC"/>
-                            <constraint firstItem="0mG-bd-1qV" firstAttribute="centerX" secondItem="swz-nA-2Bb" secondAttribute="centerX" id="1HY-1S-aKQ"/>
+                            <constraint firstItem="0mG-bd-1qV" firstAttribute="centerX" secondItem="swz-nA-2Bb" secondAttribute="centerX" identifier="usernameCenterConstraint" id="1HY-1S-aKQ"/>
                             <constraint firstAttribute="trailing" secondItem="g19-nt-pS4" secondAttribute="trailing" id="9Fu-O7-tDV"/>
-                            <constraint firstItem="g19-nt-pS4" firstAttribute="leading" secondItem="bWt-Dv-bbX" secondAttribute="trailing" constant="-160" id="9Yi-D4-UKZ"/>
+                            <constraint firstItem="g19-nt-pS4" firstAttribute="top" secondItem="X02-7p-SC1" secondAttribute="bottom" constant="-137" identifier="headingVerticalSpacing" id="Ahr-d1-oEn"/>
                             <constraint firstItem="Du5-qC-amv" firstAttribute="top" secondItem="VDc-Ax-v7f" secondAttribute="bottom" constant="23" id="DSI-bJ-CE7"/>
                             <constraint firstItem="g19-nt-pS4" firstAttribute="top" secondItem="X02-7p-SC1" secondAttribute="bottom" constant="-137" id="FTK-fD-gyw"/>
-                            <constraint firstItem="dq9-MU-FzG" firstAttribute="top" secondItem="bWt-Dv-bbX" secondAttribute="bottom" constant="61" id="Jxj-fB-WzU"/>
                             <constraint firstItem="rP8-pY-Cpb" firstAttribute="leading" secondItem="g19-nt-pS4" secondAttribute="trailing" constant="-109" id="LHx-PV-W9W"/>
-                            <constraint firstItem="g19-nt-pS4" firstAttribute="leading" secondItem="Cnf-rL-IkI" secondAttribute="trailing" constant="-77" id="Nzv-sK-tnb"/>
+                            <constraint firstItem="g19-nt-pS4" firstAttribute="leading" secondItem="Cnf-rL-IkI" secondAttribute="trailing" constant="-77" identifier="topLeftWidth" id="Nzv-sK-tnb"/>
                             <constraint firstItem="Du5-qC-amv" firstAttribute="centerX" secondItem="swz-nA-2Bb" secondAttribute="centerX" id="QGZ-8b-Zio"/>
                             <constraint firstItem="m6l-Ih-PIb" firstAttribute="leading" secondItem="g19-nt-pS4" secondAttribute="trailing" constant="-234" id="Sv9-9K-Cxp"/>
                             <constraint firstItem="dq9-MU-FzG" firstAttribute="top" secondItem="sXb-eA-X4H" secondAttribute="bottom" constant="37" id="UKT-L8-kVE"/>
+                            <constraint firstItem="bWt-Dv-bbX" firstAttribute="leading" secondItem="swz-nA-2Bb" secondAttribute="leadingMargin" constant="16" id="XOs-DA-JkR"/>
                             <constraint firstItem="g19-nt-pS4" firstAttribute="top" secondItem="Cnf-rL-IkI" secondAttribute="bottom" constant="-94" id="ZjW-iX-2KR"/>
-                            <constraint firstItem="0mG-bd-1qV" firstAttribute="top" secondItem="X02-7p-SC1" secondAttribute="bottom" constant="8" id="Zrc-tU-E2R"/>
+                            <constraint firstItem="0mG-bd-1qV" firstAttribute="top" secondItem="X02-7p-SC1" secondAttribute="bottom" constant="8" identifier="usernameVerticalConstraint" id="Zrc-tU-E2R"/>
+                            <constraint firstItem="dq9-MU-FzG" firstAttribute="top" secondItem="bWt-Dv-bbX" secondAttribute="bottom" constant="103" id="dID-Wk-79G"/>
                             <constraint firstItem="g19-nt-pS4" firstAttribute="top" secondItem="swz-nA-2Bb" secondAttribute="top" id="dLX-6P-TIr"/>
                             <constraint firstItem="dq9-MU-FzG" firstAttribute="top" secondItem="m6l-Ih-PIb" secondAttribute="bottom" constant="208" id="dwv-0A-qAr"/>
-                            <constraint firstItem="X02-7p-SC1" firstAttribute="centerX" secondItem="g19-nt-pS4" secondAttribute="centerX" id="fiN-ej-cXf"/>
+                            <constraint firstItem="X02-7p-SC1" firstAttribute="centerX" secondItem="g19-nt-pS4" secondAttribute="centerX" identifier="headingCenterX" id="fiN-ej-cXf"/>
                             <constraint firstItem="g19-nt-pS4" firstAttribute="leading" secondItem="swz-nA-2Bb" secondAttribute="leading" id="hfj-L2-uUP"/>
                             <constraint firstItem="g19-nt-pS4" firstAttribute="top" secondItem="rP8-pY-Cpb" secondAttribute="bottom" constant="-110" id="mf4-1g-Eu4"/>
-                            <constraint firstItem="VDc-Ax-v7f" firstAttribute="top" secondItem="0mG-bd-1qV" secondAttribute="bottom" constant="9" id="oMk-64-Dwi"/>
+                            <constraint firstItem="VDc-Ax-v7f" firstAttribute="top" secondItem="0mG-bd-1qV" secondAttribute="bottom" constant="9" identifier="usernamePasswordVerticalConstraint" id="oMk-64-Dwi"/>
                             <constraint firstItem="dq9-MU-FzG" firstAttribute="top" secondItem="g19-nt-pS4" secondAttribute="bottom" id="tSk-cp-j8j"/>
                             <constraint firstItem="VDc-Ax-v7f" firstAttribute="centerX" secondItem="swz-nA-2Bb" secondAttribute="centerX" id="yLO-g4-QJk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FTK-fD-gyw"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="sMV-s5-Sax"/>
                     <connections>
                         <outlet property="bottomMiddleStar" destination="bWt-Dv-bbX" id="Yj0-vX-gaO"/>
                         <outlet property="bottomRightStar" destination="sXb-eA-X4H" id="7LQ-xh-EAo"/>
                         <outlet property="heading" destination="X02-7p-SC1" id="yC4-qn-mL6"/>
-                        <outlet property="loginButton" destination="Du5-qC-amv" id="pK2-7A-0F7"/>
+                        <outlet property="loginButton" destination="Du5-qC-amv" id="a7l-ra-whI"/>
+                        <outlet property="loginVerticalSpacingConstraint" destination="DSI-bJ-CE7" id="Ga0-hE-HRh"/>
+                        <outlet property="loginWidthConstraint" destination="N5Y-pL-ko9" id="QSF-9g-L7q"/>
                         <outlet property="middleStar" destination="m6l-Ih-PIb" id="jF9-rZ-Z7c"/>
                         <outlet property="password" destination="VDc-Ax-v7f" id="9kF-Rf-hlJ"/>
                         <outlet property="topLeftStar" destination="Cnf-rL-IkI" id="7sa-Tj-7Iu"/>
