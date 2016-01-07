@@ -30,7 +30,14 @@ class SpaceViewController: UIViewController {
     @IBOutlet weak var bottomMiddleStar: UIImageView!
     @IBOutlet weak var bottomRightStar: UIImageView!
     
-    @IBOutlet weak var usernameVerticalConstraint: NSLayoutConstraint!
+    
+    let spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+    let status = UIImageView(image: UIImage(named: "banner"))
+    let label = UILabel()
+    let messages = ["Connecting ...", "Baking Cookies ...", "Contacting NASA ...", "Success"]
+    
+    var statusPosition = CGPoint.zero
+    var pressCount = 0
     
     @IBOutlet weak var loginButton: UIButton! {
         didSet {
@@ -41,32 +48,6 @@ class SpaceViewController: UIViewController {
     // Login layout constraints
     @IBOutlet weak var loginWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var loginVerticalSpacingConstraint: NSLayoutConstraint!
-    
-    // Set up login animation actions and spinner animation actions
-    @IBAction func loginAction(sender: AnyObject) {
-        
-        self.loginWidthConstraint.constant *= 1.33
-        self.loginVerticalSpacingConstraint.constant *= 2.5
-        self.loginButton.backgroundColor = UIColor(red: 0.85, green: 0.83, blue: 0.45, alpha: 1.0)
-        
-        self.spinner.center = CGPoint(x: 40, y: self.loginButton.frame.size.height/2)
-        self.spinner.alpha = 1.0
-        
-        
-        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.0, options: [], animations: {
-            self.view.setNeedsLayout()
-            self.view.layoutIfNeeded()
-            }, completion: nil)
-        
-    }
-    
-    
-    let spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
-    let status = UIImageView(image: UIImage(named: "banner"))
-    let label = UILabel()
-    let messages = ["Connecting ...", "Baking Cookies ...", "Contacting NASA ...", "Failed"]
-    
-    var statusPosition = CGPoint.zero
     
     
     override func viewDidLoad() {
@@ -81,9 +62,17 @@ class SpaceViewController: UIViewController {
         // Set up status banner
         status.hidden = true
         status.center = loginButton.center
-        status.frame = CGRect(x: loginButton.center.x/4+12, y: loginButton.center.y-15, width: 200, height: 26)
+        status.frame = CGRect(x: loginButton.center.x/4+12, y: loginButton.center.y-30, width: 200, height: 26)
         view.addSubview(status)
         
+        // Set up color and frame for message label
+        label.frame = CGRect(x: 0.0, y: 0.0, width: status.frame.size.width, height: status.frame.size.height)
+        label.font = UIFont(name: "HelveticaNeue", size: 18.0)
+        label.textColor = UIColor(red: 0.89, green: 0.38, blue: 0.0, alpha: 1.0)
+        label.textAlignment = .Center
+        status.addSubview(label)
+        
+        statusPosition = status.center
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -125,6 +114,74 @@ class SpaceViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.username.resignFirstResponder()
         self.password.resignFirstResponder()
+    }
+    
+    
+    // MARK : Animation Actions
+    
+    // Set up login animation actions and spinner animation actions
+    @IBAction func loginAction(sender: AnyObject) {
+        
+        if pressCount < 1{
+            self.loginWidthConstraint.constant *= 1.33
+            self.loginVerticalSpacingConstraint.constant *= 2.5
+            self.loginButton.backgroundColor = UIColor(red: 0.85, green: 0.83, blue: 0.45, alpha: 1.0)
+        
+            self.spinner.center = CGPoint(x: 40, y: self.loginButton.frame.size.height/2)
+            self.spinner.alpha = 1.0
+        
+        
+            UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.0, options: [], animations: {
+                self.view.setNeedsLayout()
+                self.view.layoutIfNeeded()
+                }, completion: {_ in
+                    self.showMessage(index: 0)
+            })
+        }
+        pressCount += 1
+        
+    }
+    
+    // Display message banner
+    func showMessage(index index: Int) {
+        label.text = messages[index]
+    
+        UIView.transitionWithView(status, duration: 0.33, options:
+            [.CurveEaseOut, .TransitionCurlDown], animations: {
+                self.status.hidden = false
+            }, completion: { [weak self]_ in
+                guard let strongself = self else {
+                    return
+                }
+                
+                //transition completion
+                delay(seconds: 2.0) {
+                    if index < strongself.messages.count-1 {
+                        strongself.removeMessage(index: index)
+                    } else {
+                        //reset form
+                        strongself.spinner.alpha = 0.0
+                    }
+                }
+        })
+        
+    }
+    
+    // Remove message banner and show next message
+    func removeMessage(index index: Int) {
+        UIView.animateWithDuration(0.33, delay: 0.0, options: [], animations: { [weak self] in
+            guard let strongself = self else {
+                return
+            }
+            strongself.status.center.x += strongself.view.frame.size.width
+            }, completion: { [weak self] _ in
+                guard let strongself = self else {
+                    return
+                }
+                strongself.status.hidden = true
+                strongself.status.center = strongself.statusPosition
+                strongself.showMessage(index: index + 1)
+        })
     }
     
 
