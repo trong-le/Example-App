@@ -11,6 +11,23 @@
 		F85D54B51C388F6B009310E9 /* JSONDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85D54B41C388F6B009310E9 /* JSONDataTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F85D54F31C398F39009310E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85D54F21C398F39009310E9 /* MapKit.framework */; };
 		F85D54F51C3992A4009310E9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85D54F41C3992A4009310E9 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F88EE2C11C4EE58B00BBECAF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2BB1C4EE58B00BBECAF /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		F88EE2C21C4EE58B00BBECAF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2BC1C4EE58B00BBECAF /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		F88EE2C31C4EE58B00BBECAF /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2BD1C4EE58B00BBECAF /* ParseFacebookUtils.framework */; settings = {ASSET_TAGS = (); }; };
+		F88EE2C41C4EE58B00BBECAF /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2BE1C4EE58B00BBECAF /* ParseFacebookUtilsV4.framework */; settings = {ASSET_TAGS = (); }; };
+		F88EE2C51C4EE58B00BBECAF /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2BF1C4EE58B00BBECAF /* ParseTwitterUtils.framework */; settings = {ASSET_TAGS = (); }; };
+		F88EE2C61C4EE58B00BBECAF /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2C01C4EE58B00BBECAF /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
+		F88EE2C81C4EE73800BBECAF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2C71C4EE73800BBECAF /* AudioToolbox.framework */; };
+		F88EE2CA1C4EE74300BBECAF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2C91C4EE74300BBECAF /* CFNetwork.framework */; };
+		F88EE2CC1C4EE74C00BBECAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2CB1C4EE74C00BBECAF /* CoreGraphics.framework */; };
+		F88EE2CE1C4EE75300BBECAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2CD1C4EE75300BBECAF /* CoreLocation.framework */; };
+		F88EE2D01C4EE75C00BBECAF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2CF1C4EE75C00BBECAF /* QuartzCore.framework */; };
+		F88EE2D21C4EE76400BBECAF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2D11C4EE76400BBECAF /* Security.framework */; };
+		F88EE2D41C4EE76A00BBECAF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2D31C4EE76A00BBECAF /* StoreKit.framework */; };
+		F88EE2D61C4EE77400BBECAF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2D51C4EE77400BBECAF /* SystemConfiguration.framework */; };
+		F88EE2D81C4EE77E00BBECAF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2D71C4EE77E00BBECAF /* libz.tbd */; };
+		F88EE2DA1C4EE78600BBECAF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2D91C4EE78600BBECAF /* libsqlite3.tbd */; };
+		F88EE2E21C4EF2FB00BBECAF /* RestaurantDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88EE2E11C4EF2FB00BBECAF /* RestaurantDataTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F896464E1C32FEA400BFFAA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F896464D1C32FEA400BFFAA8 /* AppDelegate.swift */; };
 		F89646531C32FEA400BFFAA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89646511C32FEA400BFFAA8 /* Main.storyboard */; };
 		F89646551C32FEA400BFFAA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F89646541C32FEA400BFFAA8 /* Assets.xcassets */; };
@@ -44,6 +61,23 @@
 		F85D54B41C388F6B009310E9 /* JSONDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDataTableViewController.swift; sourceTree = "<group>"; };
 		F85D54F21C398F39009310E9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F85D54F41C3992A4009310E9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F88EE2BB1C4EE58B00BBECAF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		F88EE2BC1C4EE58B00BBECAF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F88EE2BD1C4EE58B00BBECAF /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		F88EE2BE1C4EE58B00BBECAF /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		F88EE2BF1C4EE58B00BBECAF /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		F88EE2C01C4EE58B00BBECAF /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		F88EE2C71C4EE73800BBECAF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F88EE2C91C4EE74300BBECAF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F88EE2CB1C4EE74C00BBECAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F88EE2CD1C4EE75300BBECAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F88EE2CF1C4EE75C00BBECAF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F88EE2D11C4EE76400BBECAF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F88EE2D31C4EE76A00BBECAF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F88EE2D51C4EE77400BBECAF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F88EE2D71C4EE77E00BBECAF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F88EE2D91C4EE78600BBECAF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F88EE2E11C4EF2FB00BBECAF /* RestaurantDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDataTableViewController.swift; sourceTree = "<group>"; };
 		F896464A1C32FEA400BFFAA8 /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F896464D1C32FEA400BFFAA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F89646521C32FEA400BFFAA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,7 +100,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F88EE2DA1C4EE78600BBECAF /* libsqlite3.tbd in Frameworks */,
+				F88EE2D81C4EE77E00BBECAF /* libz.tbd in Frameworks */,
+				F88EE2D61C4EE77400BBECAF /* SystemConfiguration.framework in Frameworks */,
+				F88EE2D41C4EE76A00BBECAF /* StoreKit.framework in Frameworks */,
+				F88EE2D21C4EE76400BBECAF /* Security.framework in Frameworks */,
+				F88EE2D01C4EE75C00BBECAF /* QuartzCore.framework in Frameworks */,
+				F88EE2CE1C4EE75300BBECAF /* CoreLocation.framework in Frameworks */,
+				F88EE2CC1C4EE74C00BBECAF /* CoreGraphics.framework in Frameworks */,
+				F88EE2CA1C4EE74300BBECAF /* CFNetwork.framework in Frameworks */,
+				F88EE2C81C4EE73800BBECAF /* AudioToolbox.framework in Frameworks */,
 				F85D54F31C398F39009310E9 /* MapKit.framework in Frameworks */,
+				F88EE2C21C4EE58B00BBECAF /* Parse.framework in Frameworks */,
+				F88EE2C61C4EE58B00BBECAF /* ParseUI.framework in Frameworks */,
+				F88EE2C31C4EE58B00BBECAF /* ParseFacebookUtils.framework in Frameworks */,
+				F88EE2C11C4EE58B00BBECAF /* Bolts.framework in Frameworks */,
+				F88EE2C51C4EE58B00BBECAF /* ParseTwitterUtils.framework in Frameworks */,
+				F88EE2C41C4EE58B00BBECAF /* ParseFacebookUtilsV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +140,22 @@
 		F89646411C32FEA400BFFAA8 = {
 			isa = PBXGroup;
 			children = (
+				F88EE2D91C4EE78600BBECAF /* libsqlite3.tbd */,
+				F88EE2D71C4EE77E00BBECAF /* libz.tbd */,
+				F88EE2D51C4EE77400BBECAF /* SystemConfiguration.framework */,
+				F88EE2D31C4EE76A00BBECAF /* StoreKit.framework */,
+				F88EE2D11C4EE76400BBECAF /* Security.framework */,
+				F88EE2CF1C4EE75C00BBECAF /* QuartzCore.framework */,
+				F88EE2CD1C4EE75300BBECAF /* CoreLocation.framework */,
+				F88EE2CB1C4EE74C00BBECAF /* CoreGraphics.framework */,
+				F88EE2C91C4EE74300BBECAF /* CFNetwork.framework */,
+				F88EE2C71C4EE73800BBECAF /* AudioToolbox.framework */,
+				F88EE2BB1C4EE58B00BBECAF /* Bolts.framework */,
+				F88EE2BC1C4EE58B00BBECAF /* Parse.framework */,
+				F88EE2BD1C4EE58B00BBECAF /* ParseFacebookUtils.framework */,
+				F88EE2BE1C4EE58B00BBECAF /* ParseFacebookUtilsV4.framework */,
+				F88EE2BF1C4EE58B00BBECAF /* ParseTwitterUtils.framework */,
+				F88EE2C01C4EE58B00BBECAF /* ParseUI.framework */,
 				F85D54F21C398F39009310E9 /* MapKit.framework */,
 				F896464C1C32FEA400BFFAA8 /* example */,
 				F89646611C32FEA400BFFAA8 /* exampleTests */,
@@ -113,8 +179,9 @@
 			children = (
 				F82D14431C3B5CEF00D14373 /* LoginViewController.swift */,
 				F85D54B41C388F6B009310E9 /* JSONDataTableViewController.swift */,
-				F85D54F41C3992A4009310E9 /* MapViewController.swift */,
+				F88EE2E11C4EF2FB00BBECAF /* RestaurantDataTableViewController.swift */,
 				F896467E1C3302C400BFFAA8 /* ImageViewController.swift */,
+				F85D54F41C3992A4009310E9 /* MapViewController.swift */,
 				F896467C1C33011E00BFFAA8 /* Locations.swift */,
 				F89646511C32FEA400BFFAA8 /* Main.storyboard */,
 				F8FA9C8E1C3DCF7400F7DE58 /* SpaceViewController.swift */,
@@ -284,6 +351,7 @@
 			files = (
 				F82D14441C3B5CEF00D14373 /* LoginViewController.swift in Sources */,
 				F896467D1C33011E00BFFAA8 /* Locations.swift in Sources */,
+				F88EE2E21C4EF2FB00BBECAF /* RestaurantDataTableViewController.swift in Sources */,
 				F8FA9C8F1C3DCF7400F7DE58 /* SpaceViewController.swift in Sources */,
 				F85D54F51C3992A4009310E9 /* MapViewController.swift in Sources */,
 				F85D54B51C388F6B009310E9 /* JSONDataTableViewController.swift in Sources */,
@@ -430,6 +498,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Trong.Le.example;
@@ -441,6 +513,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Trong.Le.example;

@@ -37,7 +37,7 @@ class SpaceViewController: UIViewController {
     let messages = ["Connecting ...", "Baking Cookies ...", "Contacting NASA ...", "Success"]
     
     var statusPosition = CGPoint.zero
-    var pressCount = 0
+    var pressed = true
     
     @IBOutlet weak var loginButton: UIButton! {
         didSet {
@@ -83,6 +83,8 @@ class SpaceViewController: UIViewController {
         middleStar.alpha = 0.0
         bottomMiddleStar.alpha = 0.0
         bottomRightStar.alpha = 0.0
+        
+        
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -116,13 +118,19 @@ class SpaceViewController: UIViewController {
         self.password.resignFirstResponder()
     }
     
+    // Dismiss keyboard when return is pressed
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     
     // MARK : Animation Actions
     
     // Set up login animation actions and spinner animation actions
     @IBAction func loginAction(sender: AnyObject) {
         
-        if pressCount < 1{
+        if pressed {
             self.loginWidthConstraint.constant *= 1.33
             self.loginVerticalSpacingConstraint.constant *= 2.5
             self.loginButton.backgroundColor = UIColor(red: 0.85, green: 0.83, blue: 0.45, alpha: 1.0)
@@ -138,8 +146,8 @@ class SpaceViewController: UIViewController {
                     self.showMessage(index: 0)
             })
         }
-        pressCount += 1
         
+        pressed = false
     }
     
     // Display message banner

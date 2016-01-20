@@ -8,6 +8,8 @@
 
 import UIKit
 
+import Parse
+
 class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UIAlertViewDelegate {
 
     // Declare outlets
@@ -15,7 +17,7 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var photoLabel: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
-    var name: String? = ""
+    var name: String?
     
     // Set up submit button
     @IBAction func submitButton(sender: UIButton) {
@@ -65,5 +67,7 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         super.viewDidLoad()
         usernameField.delegate = self
     }
+    
+
     
 }
