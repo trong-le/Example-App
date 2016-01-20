@@ -351,6 +351,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="dEl-72-ccZ" kind="show" identifier="restaurantInformation" trigger="accessoryAction" id="wdr-zM-6Fu"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -363,6 +366,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2y-3L-MHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-968" y="431"/>
+        </scene>
+        <!--Restaurant Data Detail Table View Controller-->
+        <scene sceneID="jxm-bI-8TM">
+            <objects>
+                <tableViewController id="dEl-72-ccZ" customClass="RestaurantDataDetailTableViewController" customModule="example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zng-rX-T7t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="O4I-jA-TFd">
+                            <rect key="frame" x="0.0" y="64" width="600" height="174"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Apx-NY-2eM">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="174"/>
+                                    <animations/>
+                                </mapView>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Apx-NY-2eM" firstAttribute="top" secondItem="O4I-jA-TFd" secondAttribute="top" id="Kta-PJ-Rxx"/>
+                                <constraint firstAttribute="trailing" secondItem="Apx-NY-2eM" secondAttribute="trailing" id="Unt-Y5-SGC"/>
+                                <constraint firstItem="Apx-NY-2eM" firstAttribute="leading" secondItem="O4I-jA-TFd" secondAttribute="leading" id="ZHZ-P9-Rwi"/>
+                                <constraint firstAttribute="bottom" secondItem="Apx-NY-2eM" secondAttribute="bottom" id="wCd-sU-Q7r"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection id="qQP-4P-w3m">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="T29-x2-ryC">
+                                        <rect key="frame" x="0.0" y="238" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T29-x2-ryC" id="nxx-Jm-uJv">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1Q-Fq-DR1">
+                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Eny-3h-27s">
+                                        <rect key="frame" x="0.0" y="282" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eny-3h-27s" id="wXc-Ly-Ldv">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WV3-Tw-8t0">
+                                        <rect key="frame" x="0.0" y="326" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WV3-Tw-8t0" id="7ZY-e7-0fb">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="dEl-72-ccZ" id="5rL-tI-HmW"/>
+                            <outlet property="delegate" destination="dEl-72-ccZ" id="Egn-73-xQS"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="restaurantMapView" destination="Apx-NY-2eM" id="cjg-lO-J9o"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccs-K4-fT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-968" y="1231"/>
         </scene>
         <!--Animation-->
         <scene sceneID="WLU-VJ-NMZ">

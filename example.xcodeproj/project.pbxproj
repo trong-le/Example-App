@@ -28,6 +28,7 @@
 		F88EE2D81C4EE77E00BBECAF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2D71C4EE77E00BBECAF /* libz.tbd */; };
 		F88EE2DA1C4EE78600BBECAF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F88EE2D91C4EE78600BBECAF /* libsqlite3.tbd */; };
 		F88EE2E21C4EF2FB00BBECAF /* RestaurantDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88EE2E11C4EF2FB00BBECAF /* RestaurantDataTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F88EE2E61C4FFBC700BBECAF /* RestaurantDataDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88EE2E51C4FFBC700BBECAF /* RestaurantDataDetailTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F896464E1C32FEA400BFFAA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F896464D1C32FEA400BFFAA8 /* AppDelegate.swift */; };
 		F89646531C32FEA400BFFAA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89646511C32FEA400BFFAA8 /* Main.storyboard */; };
 		F89646551C32FEA400BFFAA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F89646541C32FEA400BFFAA8 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		F88EE2D71C4EE77E00BBECAF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F88EE2D91C4EE78600BBECAF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F88EE2E11C4EF2FB00BBECAF /* RestaurantDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDataTableViewController.swift; sourceTree = "<group>"; };
+		F88EE2E51C4FFBC700BBECAF /* RestaurantDataDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDataDetailTableViewController.swift; sourceTree = "<group>"; };
 		F896464A1C32FEA400BFFAA8 /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F896464D1C32FEA400BFFAA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F89646521C32FEA400BFFAA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				F82D14431C3B5CEF00D14373 /* LoginViewController.swift */,
 				F85D54B41C388F6B009310E9 /* JSONDataTableViewController.swift */,
 				F88EE2E11C4EF2FB00BBECAF /* RestaurantDataTableViewController.swift */,
+				F88EE2E51C4FFBC700BBECAF /* RestaurantDataDetailTableViewController.swift */,
 				F896467E1C3302C400BFFAA8 /* ImageViewController.swift */,
 				F85D54F41C3992A4009310E9 /* MapViewController.swift */,
 				F896467C1C33011E00BFFAA8 /* Locations.swift */,
@@ -355,6 +358,7 @@
 				F8FA9C8F1C3DCF7400F7DE58 /* SpaceViewController.swift in Sources */,
 				F85D54F51C3992A4009310E9 /* MapViewController.swift in Sources */,
 				F85D54B51C388F6B009310E9 /* JSONDataTableViewController.swift in Sources */,
+				F88EE2E61C4FFBC700BBECAF /* RestaurantDataDetailTableViewController.swift in Sources */,
 				F896467F1C3302C400BFFAA8 /* ImageViewController.swift in Sources */,
 				F896464E1C32FEA400BFFAA8 /* AppDelegate.swift in Sources */,
 			);
