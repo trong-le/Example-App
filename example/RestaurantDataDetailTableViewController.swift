@@ -10,12 +10,11 @@ import UIKit
 import MapKit
 import Parse
 
-private let reusePinIdentifier = "pin"
-
 class RestaurantDataDetailTableViewController: UITableViewController, MKMapViewDelegate {
 
     var restaurant: PFObject?
     
+    // Declare mapView
     @IBOutlet weak var restaurantMapView: MKMapView! {
         didSet {
             restaurantMapView.mapType = .Standard
@@ -24,13 +23,16 @@ class RestaurantDataDetailTableViewController: UITableViewController, MKMapViewD
         
     }
     
+    // Set name label
     @IBOutlet weak var restaurantName: UILabel! {
         didSet {
             restaurantName.text = restaurant?["Name"] as? String
         }
     }
     
-    private func addLocationAnnotation(location: PFGeoPoint) {
+    // Add pin annotation for restaurant
+    private func addLocationAnnotation() {
+        let location = restaurant?["Address"] as! PFGeoPoint
         let lat = location.latitude
         let long = location.longitude
         let restaurantLoc = CLLocationCoordinate2D(latitude: lat, longitude: long)
@@ -52,9 +54,8 @@ class RestaurantDataDetailTableViewController: UITableViewController, MKMapViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let restaurantGeo = restaurant?["Address"] as! PFGeoPoint
         //let restaurantCity = restaurant?["City"] as! String
-        addLocationAnnotation(restaurantGeo)
+        addLocationAnnotation()
 
     }
 
