@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import Parse
 
+private let reusePinIdentifier = "pin"
 
 class RestaurantDataDetailTableViewController: UITableViewController, MKMapViewDelegate {
 
@@ -23,14 +24,30 @@ class RestaurantDataDetailTableViewController: UITableViewController, MKMapViewD
         
     }
     
+    @IBOutlet weak var restaurantName: UILabel! {
+        didSet {
+            restaurantName.text = restaurant?["Name"] as? String
+        }
+    }
     
     private func addLocationAnnotation(location: PFGeoPoint) {
         let lat = location.latitude
         let long = location.longitude
         let restaurantLoc = CLLocationCoordinate2D(latitude: lat, longitude: long)
-        print(restaurantLoc)
         let annotation = MyAnnotation(coordinate: restaurantLoc, city: .Cincinnati)
         restaurantMapView.addAnnotation(annotation)
+        setMapCenter(restaurantLoc)
+    }
+    
+    // Center map on restaurant location
+    private func setMapCenter(locationCenter: CLLocationCoordinate2D) {
+        let latDelta: CLLocationDegrees = 0.005
+        let longDelta: CLLocationDegrees = 0.005
+        let span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        
+        let region: MKCoordinateRegion = MKCoordinateRegionMake(locationCenter, span)
+        
+        self.restaurantMapView.setRegion(region, animated: true)
     }
     
     override func viewDidLoad() {
@@ -38,13 +55,8 @@ class RestaurantDataDetailTableViewController: UITableViewController, MKMapViewD
         let restaurantGeo = restaurant?["Address"] as! PFGeoPoint
         //let restaurantCity = restaurant?["City"] as! String
         addLocationAnnotation(restaurantGeo)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    
 
 
     // MARK: - Table view data source
