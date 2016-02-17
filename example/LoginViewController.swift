@@ -22,7 +22,7 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     // Set up submit button
     @IBAction func submitButton(sender: UIButton) {
         name = usernameField.text
-        if name != "" {
+        if !name!.isEmpty {
             let alert = UIAlertController(title: "Alert View", message: "Hello \(name!)!", preferredStyle: .Alert)
             self.presentViewController(alert, animated: true, completion: nil)
             alert.addAction(UIAlertAction(title: "Exit", style: .Default, handler: nil))

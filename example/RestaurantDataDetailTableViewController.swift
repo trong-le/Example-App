@@ -11,8 +11,9 @@ import MapKit
 import Parse
 
 class RestaurantDataDetailTableViewController: UITableViewController, MKMapViewDelegate {
-
+    
     var restaurant: PFObject?
+    let reuseIdentifier = "ImageCell"
     
     // Declare mapView
     @IBOutlet weak var restaurantMapView: MKMapView! {
@@ -20,7 +21,6 @@ class RestaurantDataDetailTableViewController: UITableViewController, MKMapViewD
             restaurantMapView.mapType = .Standard
             restaurantMapView.delegate = self
         }
-        
     }
     
     // Set name label
@@ -30,9 +30,29 @@ class RestaurantDataDetailTableViewController: UITableViewController, MKMapViewD
         }
     }
     
+    // Switch to button to maps??
+    @IBOutlet weak var restaurantAddress: UILabel! {
+        didSet {
+            restaurantAddress.text = restaurant?["Address"] as? String
+        }
+    }
+    
+    // Add website URL
+    @IBOutlet weak var restaurantWebsite: UILabel! {
+        didSet {
+            restaurantWebsite.text = restaurant?["URL"] as? String
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //let restaurantCity = restaurant?["City"] as! String
+        addLocationAnnotation()
+    }
+    
     // Add pin annotation for restaurant
     private func addLocationAnnotation() {
-        let location = restaurant?["Address"] as! PFGeoPoint
+        let location = restaurant?["Coordinates"] as! PFGeoPoint
         let lat = location.latitude
         let long = location.longitude
         let restaurantLoc = CLLocationCoordinate2D(latitude: lat, longitude: long)
@@ -51,62 +71,30 @@ class RestaurantDataDetailTableViewController: UITableViewController, MKMapViewD
         
         self.restaurantMapView.setRegion(region, animated: true)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //let restaurantCity = restaurant?["City"] as! String
-        addLocationAnnotation()
-
-    }
-
-
-    // MARK: - Table view data source
-
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+extension RestaurantDataDetailTableViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let count = 5
+        return count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ImageCell
+        cell.restaurantImageView.image = UIImage(named: "Close-up_of_Sirius")
+        
+        return cell
+    }
+}
+
+class ImageCell: UICollectionViewCell {
+    @IBOutlet weak var restaurantImageView: UIImageView!
+}
+
+
+
+
