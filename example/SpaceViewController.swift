@@ -59,10 +59,13 @@ class SpaceViewController: UIViewController {
         spinner.alpha = 0.0
         loginButton.addSubview(spinner)
         
+        let yDistance = (loginButton.center.y + password.center.y)/2
+        let xDistance = view.center.x - 100
+        
         // Set up status banner
         status.hidden = true
         status.center = loginButton.center
-        status.frame = CGRect(x: loginButton.center.x/4+12, y: loginButton.center.y-30, width: 200, height: 26)
+        status.frame = CGRect(x: xDistance, y: yDistance, width: 200, height: 26)
         view.addSubview(status)
         
         // Set up color and frame for message label
