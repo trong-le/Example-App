@@ -145,7 +145,7 @@ class SpaceViewController: UIViewController {
             UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.0, options: [], animations: {
                 self.view.setNeedsLayout()
                 self.view.layoutIfNeeded()
-                }, completion: {_ in
+                }, completion: { _ in
                     self.showMessage(index: 0)
             })
         }
